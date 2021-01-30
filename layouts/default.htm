@@ -1,0 +1,52 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        {% partial 'site/meta' %}
+    </head>
+    <body>
+
+        <div style="max-width: 1403px; margin: 0 auto">
+            <!-- Header -->
+            <header id="layout-header">
+                {% partial 'site/header' %}
+            </header>
+
+            <!-- Sidebar -->
+            <section id="layout-sidebar">
+                {% partial 'site/sidebar' %}
+            </section>
+
+            <!-- Content -->
+            <section id="layout-content">
+                <div id="homePosts" class="post-list home-posts" style="position: relative; height: 320.797px;">
+        <div class="home-post" style="position: absolute; left: 0px; top: 0px;">
+        <article>
+
+            <header class="post-title">
+            <h1><a href="http://localhost:8000/blog/post/first-blog-post">Post Pertama</a></h1>
+        </header>
+    
+    <div class="post-content">
+        Posting blog pertama ada di sini. Mungkin ide yang bagus untuk memperbarui posting ini dengan beberapa konten yang lebih relevan.</div>
+
+    <footer>
+        <span class="published"><i class="icon icon-calendar"></i> Jan 29, 2021</span>
+                    </footer>
+</article>    </div>
+</div>
+<div class="text-center" data-control="auto-pager" data-request="onPagePosts" data-request-update="&#39;home/posts&#39;: &#39;@#homePosts&#39;" data-current-page="1" data-last-page="1" style="display: none;">
+    <a class="text-muted oc-loading">Fetching posts..</a>
+</div>            </section>
+
+            <!-- Footer -->
+            <footer id="layout-footer">
+                {% partial 'site/footer' %}
+            </footer>
+        </div>
+
+        <!-- Scripts -->
+        {% partial 'site/scripts' %}
+    </body>
+</html>

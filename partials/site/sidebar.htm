@@ -1,0 +1,30 @@
+[blogPosts]
+postsPerPage = "5"
+categoryPage = "blog/category"
+postPage = "blog/post"
+sortOrder = "published_at desc"
+==
+
+<div class="sidebar-segment">
+    <h1 class="segment-title">Octopus</h1>
+</div>
+<div class="sidebar-segment">
+    <h2 class="segment-title">Postingan Pertama</h2>
+    <ul class="segment-list">
+        {% for post in blogPosts.posts %}
+            <li><a href="{{ post.url }}">Post Pertama</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="sidebar-segment">
+    <h2 class="segment-title">Ikuti saya</h2>
+    <ul class="segment-list">
+        {% if this.theme.twitter_url %}
+            <li><a href="https://www.google.co.id/maps/place/Krajan,+Purwodadi,+Kec.+Purwodadi,+Pasuruan,+Jawa+Timur/@-7.8035823,112.7357267,3a,75y,33.24h,73.63t/data=!3m6!1e1!3m4!1skogH6zhSFmCjc66GueIgQg!2e0!7i13312!8i6656!4m5!3m4!1s0x2dd7d37286a9b7dd:0x8efe239da07af8f2!8m2!3d-7.8023639!4d112.7368135" target="_blank">Alamat</a></li>
+        {% endif %}
+        {% if this.theme.facebook_url %}
+            <li><a href="https://instagram.com/nandananda11212/" target="_blank">Instagram</a></li>
+        {% endif %}
+    </ul>
+</div>

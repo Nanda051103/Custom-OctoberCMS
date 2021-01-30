@@ -1,0 +1,8 @@
+name: Octopus
+description: 'Tema Baru'
+author: 'Renata Dwi Nanda'
+homepage: 'http://Nanda051103.com'
+code: Octopus
+form: theme_fields.yaml
+require:
+    - RainLab.Blog
